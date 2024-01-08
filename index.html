@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Visit Tokyo</title>
+    <title>E-learning</title>
 
     <script src="https://kit.fontawesome.com/c4684a5e48.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/normalize.css">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     
     <div class="landing">
-        <div class="landing-top">
-            <i class="fas fa-share-alt"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-        </div>
+     
 
         <div class="landing-content">
-            <h1>TOKYO</h1>
-            <h3>A balance of tradition and modernity</h3>
+            
 
             <div class="action-btn">
-                <a href="#" class="action-btn-content">Discover</a>
+                <a onclick="scrollToSection('section1')" class="action-btn-content">Discover</a>
             </div>
         </div>
     </div>
@@ -34,17 +29,16 @@
     <div class="navbar">
         <a href="index.html">
             <div class="icon">
-                <i class="fas fa-torii-gate"></i>
-                <h3>VisitTokyo</h3>
+                <h3>E-learning</h3>
             </div>
-        </a> <!--Icon-->
+        </a> 
 
         <div class="nav-wrapper">
             <nav id="main-nav">
-                <a href="#">Travel</a>
-                <a href="#">Landmarks</a>
-                <a href="/travel/plan.html">Plan</a>
-                <a href="#">Sign Up</a>
+                <a onclick="scrollToSection('section1')" >React.js</a>
+                <a onclick="scrollToSection('section2')" >Vue.js</a>
+                <a onclick="scrollToSection('section3')" >Angular</a>
+                <a onclick="scrollToSection('section4')" >Solid.js</a>
             </nav> <!--Navigation-->
 
             <div class="menu-btn" id="mobile-menu-btn">
@@ -55,85 +49,96 @@
     </div>
 
     <section class="content">
-        <div class="feature">
-            <div class="left">
-                <h2>Time for everything</h2>
-                <p>Donec eleifend interdum ante ut finibus. Quisque at nisl quis metus fermentum ultricies. Nam in iaculis lorem. 
-                    Nulla ac sollicitudin neque. Morbi luctus, eros vitae mollis iaculis, urna ex convallis nulla, sed sollicitudin 
-                    nunc sem non massa. Phasellus consectetur gravida nibh ut fringilla. </p>
-                <div class="button">
-                    <a href="/travel/plan.html" class="button-content">Plan yours</a>
-                </div>
+        <section id="section1">
+
+            <div class="feature">
+                <div class="left">
+                <h2 >React.js</h2>
+                <p>Virtual DOM: React uses a virtual DOM to optimize rendering. When state or props change, React creates a virtual representation of the UI and calculates the most efficient way to update the actual DOM. This process helps minimize direct manipulation of the real DOM, enhancing performance.</p>
+                   <p>
+                       
+                       Reconciliation: React's reconciliation algorithm determines the minimal set of changes needed to update the virtual DOM and subsequently the real DOM. This process ensures efficient updates and reduces unnecessary re-renders.
+                </p> 
+                 <p>
+                     
+                     Event Handling: React handles events asynchronously through its synthetic event system. Event handlers are managed efficiently to prevent blocking the main thread. </p>
+                 </p>   
+                
             </div>
-            <img src="img/feature_1.jpg">
+            <img src="data:image/png;base64,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">
             
         </div>
+    </section>
+    <section id="section2">
+
         <div class="feature">
             
             <div class="left">
-                <h2>Re-imagine everyday</h2>
-                <p>Donec eleifend interdum ante ut finibus. Quisque at nisl quis metus fermentum ultricies. Nam in iaculis lorem. 
-                    Nulla ac sollicitudin neque. Morbi luctus, eros vitae mollis iaculis, urna ex convallis nulla, sed sollicitudin 
-                    nunc sem non massa. Phasellus consectetur gravida nibh ut fringilla. </p>
-                <div class="button">
-                    <a href="#" class="button-content">Live it</a>
+                <h2 >Vue.js</h2>
+                <p>Reactivity System: Vue.js utilizes a reactivity system that enables automatic updating of the DOM when the underlying data changes. It uses a combination of getter/setter mechanisms and a dependency tracking system.
+                </p>
+                
+                <p>
+                      
+                      Virtual DOM: Similar to React, Vue.js employs a virtual DOM to optimize rendering. Changes are first applied to a virtual DOM, and the framework calculates the most efficient way to update the actual DOM.
+                  </p> 
+                  <p>
+                      
+                      Event Handling: Vue.js provides a simple and efficient event handling system, allowing developers to bind events to methods and update the data accordingly.
+                    </p>  
+                    
                 </div>
+                <img src="data:image/png;base64,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">
             </div>
-            <img src="img/feature_2.jpg">
-        </div>
-        <div class="feature">
-            <div class="left">
-                <h2>Culture and traditions</h2>
-                <p>Donec eleifend interdum ante ut finibus. Quisque at nisl quis metus fermentum ultricies. Nam in iaculis lorem. 
-                    Nulla ac sollicitudin neque. Morbi luctus, eros vitae mollis iaculis, urna ex convallis nulla, sed sollicitudin 
-                    nunc sem non massa. Phasellus consectetur gravida nibh ut fringilla. </p>
-                <div class="button">
-                    <a href="#" class="button-content">Discover</a>
+        </section>
+        <section id="section3">
+
+            <div class="feature">
+                <div class="left">
+                    <h2>Angular</h2>
+                    <p>Change Detection: Angular employs a change detection mechanism to identify and propagate changes in the application state. It uses zones to intercept asynchronous operations and trigger change detection.</p>
+                    
+                    <p>Dependency Injection: Angular utilizes dependency injection for managing the lifecycle of services and components. This process helps with code organization and facilitates modular development.</p>
+                    
+                    <p>Ahead-of-Time (AOT) Compilation: Angular supports AOT compilation, where templates are compiled during the build process. This results in smaller bundles and faster rendering at runtime. </p>
+                    
                 </div>
+                
+                <img src="data:image/png;base64,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">
             </div>
-            
-            <img src="img/feature_3.jpg">
-        </div>
+        </section>
+        <section id="section4">
+
+            <div class="feature">
+                <div class="left">
+                    <h2>Solid.js</h2>
+                    <p>Reactivity System: Solid.js, similar to Vue.js, relies on a reactivity system. It uses a fine-grained reactive model to update only the necessary parts of the DOM when data changes.</p>
+                    
+                    <p>Fine-Grained Reactivity: Solid.js is known for its fine-grained reactivity, where components re-render at the expression level rather than the virtual DOM level. This can lead to more efficient updates.</p>
+                    
+                    <p> DOM Binding: Solid.js binds data directly to the DOM, eliminating the need for a virtual DOM in some scenarios. </p>
+                    
+                </div>
+                
+                <img src="data:image/jpeg;base64,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">
+            </section>
     </section>
     <section>
-        <h2 class="center">Will you...</h2>
-        <div class="survey">
-            <div class="survey-opt first">
-                <h3>Explore the streets of Tokyo</h3>
+        <h2 class="center">Want More..</h2>
+        <div class="others">
+            <div class="others-opt first">
+                <h3>Explore Next.js</h3>
             </div>
-            <div class="survey-opt second">
-                <h3>Find secrets at the historic buildings</h3>
+            <div class="others second">
+                <h3>Explore Express and Node.js</h3>
             </div>
-            <div class="survey-opt third">
-                <h3>Watch the incredible natural landscapes</h3>
+            <div class="others third">
+                <h3>Enjoy The Bootstrap</h3>
             </div>
         </div>
     </section>
-    <section class="partners">
-        <h2>Our partners</h2>
-        <div>
-            <i class="fas fa-bacon"></i>
-            <i class="fas fa-atom"></i>
-            <i class="fas fa-birthday-cake"></i>
-            <i class="fas fa-cookie-bite"></i>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <a href="index.html">
-            <div class="icon">
-                <i class="fas fa-torii-gate"></i>
-                <h3>Visit Tokyo</h3>
-            </div>
-        </a>
-        <div>
-            <i class="fas fa-share-alt"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-        </div>
-    </footer>
-
+  
+   
     <script src="js/main.js"></script>
 </body>
 </html>
